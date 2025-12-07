@@ -1,0 +1,6 @@
+{
+  "Name": "UiPath.Micron_TestAutomationFramework",
+  "ProjectType": "Tests",
+  "Description": "Micron Test Automation Framework",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,27 @@
+﻿[	
+	{
+		"Name": "ClientID",
+		"Value": "d92b3ac6-88ac-48ab-a024-f9cb9856f5db",
+		"Description": "Client ID to interact with Orchestrator instance to get execution details"
+	},
+	{
+		"Name": "ClientSecret",
+		"Value": "_9H!FuU!DK9z%4PQ0Fk51@kZj(AcsP2CY)I(w7Y1mv0s3GRXB8XTr5jHOfRm)DW#",
+		"Description": "Client Secret to interact with Orchestrator instance to get execution details"
+	},
+	{
+		"Name": "ApplicationScope",
+		"Value": "OR.Jobs OR.TestSetExecutions",
+		"Description": "Scope to interact with Orchestrator instance to get execution details"
+	},
+	{
+		"Name": "ReportFolder",
+		"Value": "Data\\Output",
+		"Description": "Test Execution reports folder path"
+	},
+	{
+		"Name": "TestRunReportTemplatePath",
+		"Value": "Data\\Input\\TestCaseRunTemplate.html",
+		"Description": "Test Run Report HTML Template path"
+	}
+]
