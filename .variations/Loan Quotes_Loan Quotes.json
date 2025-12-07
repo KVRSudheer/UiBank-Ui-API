@@ -1,0 +1,1 @@
+[{"LoanEmail":"uipath@gmail.com","LoanAmount":"7500","LoanTerm":"5","LoanIncome":"30000","LoanAge":"35","ExpectedResult":"Congrats!"},{"LoanEmail":"uipath@gmail.com","LoanAmount":"120000","LoanTerm":"5","LoanIncome":"30000","LoanAge":"35","ExpectedResult":"Sorry, at this time you have not been approved for a loan."}]

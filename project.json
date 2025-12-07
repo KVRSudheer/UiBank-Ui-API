@@ -1,0 +1,103 @@
+{
+  "name": "UiPath.Micron_TestAutomationFramework",
+  "projectId": "da7d9f19-22ed-48b4-839d-08ae0b57ba48",
+  "description": "Micron Test Automation Framework",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiBank.Micron_Library": "[1.0.7]",
+    "UiPath.System.Activities": "[25.10.3]",
+    "UiPath.Testing.Activities": "[24.10.1]",
+    "UiPath.UIAutomation.Activities": "[25.10.21]",
+    "UiPath.WebAPI.Activities": "[2.3.2]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "25.0.157.0",
+  "projectVersion": "1.0.218816441",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "templateType": "ExecutionTemplate",
+        "fileName": ".templates\\TestFramework.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\TestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "0f1128d0-5c44-4f73-8dcd-d6957b7c4774",
+        "executionTemplatePath": ".templates\\TestExecutionRunReportTemplate.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\TestCases\\TC01_UiBankLogin.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "bd9bb99b-e5d6-4cf7-b8bc-ce6a4c176e04",
+        "executionTemplatePath": ".templates\\TestExecutionRunReportTemplate.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\TestCases\\TC02_ValidateNavigation.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9b58402f-f471-4f96-b178-a67a0f6915d6",
+        "dataVariationFilePath": ".variations\\Loan Quotes_Loan Quotes.json",
+        "executionTemplatePath": ".templates\\TestExecutionRunReportTemplate.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\TestCases\\TC03_ApplyForLoan.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "6256fc0f-0d41-42d7-924e-6b9cfdb0e6aa",
+        "executionTemplatePath": ".templates\\TestExecutionRunReportTemplate.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\TestCases\\TC04_UiBankAPI_GetQuote.xaml"
+      },
+      {
+        "templateType": "ExecutionTemplate",
+        "fileName": ".templates\\TestExecutionRunReportTemplate.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
