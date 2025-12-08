@@ -35,5 +35,5 @@ steps:
   inputs:
     testTarget: 'TestProject'
     orchestratorConnection: 'Pipeline'
-    testProjectPath: '$(Build.ArtifactStagingDirectory)\Output'
+    testProjectPath: 'project.json'
     folderName: 'Shared'
