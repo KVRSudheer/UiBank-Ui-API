@@ -136,7 +136,7 @@
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TC03_ApplyForLoan" sap:VirtualizedContainerService.HintSize="890,2452" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TC03_ApplyForLoan" sap:VirtualizedContainerService.HintSize="1377.2,2404.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="UiElement" />
       <Variable x:TypeArguments="x:String" Name="ApplicationStatus" />
@@ -147,9 +147,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="520,2428.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="520,2381.6" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="518.4,1828" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="518.4,1780.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -220,7 +220,7 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="484.8,1277.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Finalize" sap:VirtualizedContainerService.HintSize="484.8,1230.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -228,9 +228,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Laon Application Status!" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[Not(ApplicationStatus.ToLower.Contains(&quot;sorry&quot;))]" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_5" OutputMessageFormat="[If(Not(ApplicationStatus.ToLower.Contains(&quot;sorry&quot;)),&quot;Application success: &quot;+ApplicationStatus,&quot;Application not sanctioned: &quot;+ApplicationStatus)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
-            <If Condition="[Not String.IsNullOrEmpty(loanId)]" DisplayName="Check if Loan Is Approved" sap:VirtualizedContainerService.HintSize="451.2,958.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Not String.IsNullOrEmpty(loanId)]" DisplayName="Check if Loan Is Approved" sap:VirtualizedContainerService.HintSize="451.2,911.2" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,730.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,683.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="njl:JObject" Name="JObject" />
                   </Sequence.Variables>
@@ -240,8 +240,16 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <uu:WebServices_Util DisplayName="WebServices_Authenticate" sap:VirtualizedContainerService.HintSize="416,278.4" sap2010:WorkflowViewState.IdRef="WebServices_Util_1" JObject="[JObject]" RequestBody="[&quot;{&quot;&quot;username&quot;&quot;:&quot;&quot;Test.User&quot;&quot;,&quot;&quot;password&quot;&quot;:&quot;&quot;UiPath@123&quot;&quot;}&quot;]" RequestMethod="POST" RequestURL="https://uibank-api.uipath.com/api/users/login" />
-                  <uu:WebServices_Util DisplayName="WebServices_GetQuote" sap:VirtualizedContainerService.HintSize="416,278.4" sap2010:WorkflowViewState.IdRef="WebServices_Util_2" JObject="[JObject]" RequestBody="[&quot;{&quot;&quot;username&quot;&quot;:&quot;&quot;Test.User&quot;&quot;,&quot;&quot;password&quot;&quot;:&quot;&quot;UiPath@123&quot;&quot;}&quot;]" RequestMethod="GET" RequestURL="[&quot;https://uibank-api.uipath.com/api/quotes/&quot;+loanId.Trim()+&quot;?access_token=&quot;+jObject(&quot;id&quot;).ToString()]" />
-                  <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Quote ID validation!" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[JObject.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="VerifyExpression_6" OutputMessageFormat="[If(JObject.Count &gt; 0,&quot;Quote ID returned result&quot;,&quot;Quote ID is invalid, no data found&quot;)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
+                  <uu:WebServices_Util DisplayName="WebServices_GetQuote" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="WebServices_Util_2" JObject="[JObject]" RequestBody="[&quot;{&quot;&quot;username&quot;&quot;:&quot;&quot;Test.User&quot;&quot;,&quot;&quot;password&quot;&quot;:&quot;&quot;UiPath@123&quot;&quot;}&quot;]" RequestMethod="GET" RequestURL="[&quot;https://uibank-api.uipath.com/api/quotes/&quot;+loanId.Trim()+&quot;?access_token=&quot;+jObject(&quot;id&quot;).ToString()]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uu:WebServices_Util>
+                  <uta:VerifyExpression KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Quote ID validation!" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[JObject.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_6" OutputMessageFormat="[If(JObject.Count &gt; 0,&quot;Quote ID returned result&quot;,&quot;Quote ID is invalid, no data found&quot;)]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Newly added log&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
