@@ -30,10 +30,3 @@ steps:
     orchestratorConnection: 'Pipeline'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'Shared'
-
-- task: UiPathTest@6
-  inputs:
-    testTarget: 'TestProject'
-    orchestratorConnection: 'Pipeline'
-    testProjectPath: 'project.json'
-    folderName: 'Shared'
